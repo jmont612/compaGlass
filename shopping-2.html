@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <title>Compaglass - Biodegradables</title>
+
+    <!-- Loading Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Loading Template CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css">
+    <link rel="stylesheet" href="css/pe-icon-7-stroke.css" />
+    <link href="css/style-magnific-popup.css" rel="stylesheet" />
+
+    <!-- Awsome Fonts -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    
+  </head>
+
+  <body>
+    <!--begin header -->
+    <header class="header">
+      <!--begin navbar-fixed-top -->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <!--begin container -->
+        <div class="container">
+          <!--begin navbar -->
+          <nav class="navbar navbar-expand-lg">
+            <!--begin logo -->
+            <a class="navbar-brand" href="index.html"
+              ><img src="images/logo.png" style="max-width: 140px"
+            /></a>
+            <!--end logo -->
+          </nav>
+          <!--end navbar -->
+        </div>
+        <!--end container -->
+      </nav>
+      <!--end navbar-fixed-top -->
+    </header>
+    <!--end header -->
+    <div class="fixed-fixed"></div>
+    <!--begin gallery section -->
+    <section class="section-grey section-bottom-border">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="card">
+              <img
+                src="images/prod2.jpg"
+                class="width-100 rounded"
+                alt="pic"
+              />
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  Descripcion: Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. In, dolores dicta nihil quod totam
+                  voluptatum veritatis quos quas sint cupiditate quo atque
+                  libero. Blanditiis, unde odit tempore vero aspernatur qui!
+                </li>
+                <li class="list-group-item">
+                  código <span class="float-right">PP-017</span>
+                </li>
+                <li class="list-group-item">
+                  material <span class="float-right">caña de azúcar </span>
+                </li>
+                <li class="list-group-item">
+                  medidas <span class="float-right">17 cm</span>
+                </li>
+                <li class="list-group-item">
+                  Compra mínima <span class="float-right">125 u.</span>
+                </li>
+                <li class="list-group-item">
+                  cantidad
+                  <span class="float-right"
+                    ><button class="btn btn-outline-success" id="btnSub" onclick="restar()">-</button> 
+                    <span id="val"></span>
+                    <button class="btn btn-outline-success" id="btnAdd" onclick="sumar()">+</button></span
+                  >
+                </li>
+                <li class="list-group-item">
+                  <span class="font-weight-bold">Total:</span> <span class="float-right">S/. <span id="amount">42.00</span></span>
+                </li>
+              </ul>
+              <p class="mt-5 text-success">Completa el siguiente formulario para completar la compra</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end gallery section -->
+    <!--begin gallery section -->
+    <section class="section-grey section-bottom-border">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+          <div id="stepper1" class="bs-stepper">
+            <div class="bs-stepper-header" style="overflow-x: hidden;">
+              <div class="step" data-target="#test-l-1">
+                <button type="button" class="btn step-trigger">
+                  <span class="bs-stepper-circle">1</span>
+                  <span class="bs-stepper-label">Datos de envío</span>
+                </button>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#test-l-2">
+                <button type="button" class="btn step-trigger">
+                  <span class="bs-stepper-circle">2</span>
+                  <span class="bs-stepper-label">Método de pago</span>
+                </button>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#test-l-3">
+                <button type="button" class="btn step-trigger">
+                  <span class="bs-stepper-circle">3</span>
+                  <span class="bs-stepper-label">Listo</span>
+                </button>
+              </div>
+            </div>
+            <div class="bs-stepper-content">
+              <div id="test-l-1" class="content">
+                <h5>Completa los datos para enviar el producto</h5>
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <form
+                    id="register-form"
+                    class="register-form register"
+                    action=""
+                    method=""
+                    >
+                      <input
+                        class="register-input name-input white-input"
+                        required=""
+                        name="register_names"
+                        placeholder="Nombre*"
+                        type="text"
+                      />
+  
+                      <input
+                        class="register-input name-email white-input"
+                        required=""
+                        name="register_email"
+                        placeholder="Correo*"
+                        type="email"
+                      />
+                    </form>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <form
+                    id="register-form"
+                    class="register-form register"
+                    action=""
+                    method=""
+                    >
+                      <input
+                        class="register-input name-address white-input"
+                        required=""
+                        name="register_address"
+                        placeholder="Dirección*"
+                        type="text"
+                      />
+  
+                      <input
+                        class="register-input name-phone white-input"
+                        required=""
+                        name="register_phone"
+                        placeholder="Teléfono*"
+                        type="text"
+                      />
+                    </form>
+                  </div>
+                </div>
+                
+                <div class="float-right">
+                  <button class="btn btn-success" onclick="stepper1.next()">Siguiente</button>
+                </div>
+              </div>
+              <div id="test-l-2" class="content">
+                <div class="row">
+                  <div class="col-md-2"><img class="figure-img w-100" src="images/qr.png" alt=""></div>
+                  <div class="col-md-10">
+                    <p>Para <span class="font-weight-bold">YAPE</span>, <span class="font-weight-bold">PLIN</span> y <span class="font-weight-bold">LUKITA</span> puedes utilizar el siguiente codigo QR</p>
+                    <p>Para transferencias los siguientes números de cuenta:</p>
+                    <ul>
+                      <li><span class="font-weight-bold">BCP:</span>  193-1853946-0-25</li>
+                      <li><span class="font-weight-bold">Interbank:</span> 003-200-013071734906-37</li>
+                      <li><span class="font-weight-bold">BBVA:</span> 0011-0426-0100005960</li>
+                    </ul>
+                    <p class="text-danger"><span class="font-weight-bold">Importante:</span> Recuerda que es necesario enviar una foto de la operacion al siguiente correo: ventas@compaglass.com y nos pondremos en contacto contigo en menos de 24 horas*</p></p>
+                  </div>
+                </div>
+                <div class="float-right">
+                  <button class="btn btn-success" onclick="stepper1.previous()">Volver</button>
+                  <button class="btn btn-success" onclick="stepper1.next()">Siguiente</button>
+                </div>
+              </div>
+              <div id="test-l-3" class="content">
+                
+                <p class="text-center">
+                  "¡Hola!, <span class="font-weight-bold text-success">La compra ha sido completada</span>
+                </p>
+                <p class="text-center">
+                  ¡En nombre de <span class="font-weight-bold text-success">Compaglass</span>, queremos agradecerte inmensamente por la confianza en nuestros productos! Esperamos que estés súper contento con tu compra, tal como lo estamos nosotros.
+                </p>
+                <p class="text-center">
+                  ¡No solo eso, esperamos que el mismo supere todas tus expectativas!
+                </p>
+                <p class="text-center">
+                  Si puedes, comparte comentarios sobre el producto en nuestras redes sociales, nos será de gran ayuda para entender cómo lo estás disfrutando mejor y, si hay algún punto de mejora que podamos aprovechar para mejorar aún más.
+                </p>
+                <p class="text-center">
+                  Y, por supuesto, si necesitas ayuda, ¡siempre estamos disponibles!
+                </p>
+                <p class="text-center">
+                  Un gran abrazo,
+                </p>
+                <div class="float-right">
+                  <a href="index.html" class="btn btn-secondary" onclick="stepper1.next()">Finalizar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!--end gallery section -->
+
+    <section class="section-white section-bottom-border" id="gallery">
+      <!--begin container -->
+      <div class="container">
+        <!--begin row -->
+        <div class="row">
+          <!--begin col-md-12 -->
+          <div class="col-md-12 text-center padding-bottom-20">
+            <h2 class="section-title">
+              Otros productos que puedes interesarte
+            </h2>
+          </div>
+          <!--end col-md-12 -->
+        </div>
+        <!--end row -->
+      </div>
+      <!--end container -->
+
+      <!--begin container -->
+      <div class="container">
+        <!--begin row-->
+        <div class="row">
+          <!--begin col-md-3 -->
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <figure class="gallery-insta">
+              <!--begin popup-gallery-->
+              <div class="popup-gallery popup-gallery-rounded portfolio-pic">
+                <a class="" href="#">
+                  <img src="images/prod2.jpg" class="width-100" alt="pic" />
+                </a>
+              </div>
+              <!--end popup-gallery-->
+            </figure>
+          </div>
+          <!--end col-md-3 -->
+          <!--begin col-md-3 -->
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <figure class="gallery-insta">
+              <!--begin popup-gallery-->
+              <div class="popup-gallery popup-gallery-rounded portfolio-pic">
+                <a class="" href="#">
+                  <img src="images/prod3.jpg" class="width-100" alt="pic" />
+                </a>
+              </div>
+              <!--end popup-gallery-->
+            </figure>
+          </div>
+          <!--end col-md-3 -->
+          <!--begin col-md-3 -->
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <figure class="gallery-insta">
+              <!--begin popup-gallery-->
+              <div class="popup-gallery popup-gallery-rounded portfolio-pic">
+                <a class="" href="#">
+                  <img src="images/prod8.jpg" class="width-100" alt="pic" />
+                </a>
+              </div>
+              <!--end popup-gallery-->
+            </figure>
+          </div>
+          <!--end col-md-3 -->
+          <!--begin col-md-3 -->
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <figure class="gallery-insta">
+              <!--begin popup-gallery-->
+              <div class="popup-gallery popup-gallery-rounded portfolio-pic">
+                <a class="" href="#">
+                  <img src="images/prod9.jpg" class="width-100" alt="pic" />
+                </a>
+              </div>
+              <!--end popup-gallery-->
+            </figure>
+          </div>
+          <!--end col-md-3 -->
+        </div>
+        <!--end row -->
+      </div>
+      <!--end container -->
+    </section>
+    <!--end gallery section -->
+
+    <!--begin menu section -->
+    <section class="section-grey section-bottom-border" id="">
+      <!--begin container-->
+      <div class="container">
+        <!--begin row-->
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="section-title">Certificaciones</h2>
+
+            <!--begin partners-mentions -->
+            <ul class="partners-mentions">
+              <li><img src="images/certified1.jpg" alt="CSS Awards" /></li>
+
+              <li><img src="images/certified2.jpg" alt="Awwwards" /></li>
+
+              <li><img src="images/certified3.jpg" alt="CSS Winner" /></li>
+
+              <li>
+                <img src="images/certified4.jpg" alt="CSS Design Awards" />
+              </li>
+
+              <li><img src="images/certified5.jpg" alt="CSS Winner" /></li>
+
+              <li>
+                <img src="images/certified6.jpg" alt="CSS Design Awards" />
+              </li>
+            </ul>
+            <!--end partners-mentions -->
+          </div>
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+    </section>
+    <!--end menu section -->
+
+    <div class="whatsapp-btn">
+      <a
+        target="_blank"
+        href="https://api.whatsapp.com/send?phone=51999333999&text=%C2%A1Hola!%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20tus%20productos"
+        ><img src="images/whatsapp.png" alt="" width="60px"
+      /></a>
+    </div>
+
+    <!--begin footer -->
+    <div class="footer">
+      <!--begin container -->
+      <div class="container footer-top">
+        <!--begin row -->
+        <div class="row">
+          <!--begin col-md-4 -->
+          <div class="col-md-4 text-center">
+            <i class="pe-7s-map-2"></i>
+
+            <h5>Mantente en Contacto</h5>
+
+            <p>Lima - Perú</p>
+
+            <p>Jordan Montalvo</p>
+
+            <p>+51 959 595 959</p>
+          </div>
+          <!--end col-md-4 -->
+
+          <!--begin col-md-4 -->
+          <div class="col-md-4 text-center">
+            <i class="pe-7s-comment"></i>
+
+            <h5>Redes Sociales</h5>
+
+            <p>Síguenos para conocer más</p>
+
+            <!--begin footer_social -->
+            <ul class="footer_social">
+              <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
+
+              <!-- <li><a href="#"><i class="fab fa-pinterest"></i></a></li> -->
+
+              <li>
+                <a target="_blank" href="#"
+                  ><i class="fab fa-facebook-square"></i
+                ></a>
+              </li>
+
+              <li>
+                <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+
+              <li>
+                <a
+                  target="_blank"
+                  href="https://api.whatsapp.com/send?phone=51955982535&text=%C2%A1Hola!%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20tus%20productos"
+                  ><i class="fab fa-whatsapp-square"></i
+                ></a>
+              </li>
+
+              <!-- <li><a href="#"><i class="fab fa-dribble"></i></a></li> -->
+            </ul>
+            <!--end footer_social -->
+          </div>
+          <!--end col-md-4 -->
+
+          <!--begin col-md-4 -->
+          <div class="col-md-4 text-center">
+            <i class="pe-7s-link"></i>
+
+            <h5>Enlaces</h5>
+
+            <a target="_blank" href="#" class="footer-links"
+              >Facebook/compaglass</a
+            >
+
+            <!-- <a href="#" class="footer-links">Instagram/smartgreenperu</a> -->
+          </div>
+          <!--end col-md-4 -->
+        </div>
+        <!--end row -->
+      </div>
+      <!--end container -->
+
+      <!--begin container -->
+      <div class="container-fluid footer-bottom px-0">
+        <!--begin row -->
+        <div class="row no-gutters mx-0">
+          <!--begin col-md-12 -->
+          <div class="col-md-12 text-center">
+            <p>
+              Todos los derechos reservados © 2022
+              <span class="template-name">Compaglass</span>
+            </p>
+            <p></p>
+          </div>
+
+          <!--end col-md-6 -->
+        </div>
+        <!--end row -->
+      </div>
+      <!--end container -->
+    </div>
+    <!--end footer -->
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollTo-min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <script>
+      var stepper1Node = document.querySelector('#stepper1')
+      var stepper1 = new Stepper(document.querySelector('#stepper1'))
+
+      stepper1Node.addEventListener('show.bs-stepper', function (event) {
+        console.warn('show.bs-stepper', event)
+      })
+      stepper1Node.addEventListener('shown.bs-stepper', function (event) {
+        console.warn('shown.bs-stepper', event)
+      })
+      let btnAdd = document.getElementById("btnAdd");
+      let btnSub = document.getElementById("btnSub");
+      let spanVal = document.getElementById("val");
+      let amount = document.getElementById("amount");
+      spanVal.textContent = 1
+      let num1 = 0;
+      let num2 = 1;
+      let val = 42.00;
+      btnSub.setAttribute('disabled', '')
+      function sumar(){
+        num1=parseInt(spanVal.textContent);
+        let suma = num1+num2;
+        spanVal.textContent = suma
+        let sumaAmount = parseFloat(amount.textContent) + parseFloat(val)
+        amount.textContent = parseFloat(sumaAmount).toFixed(2);
+        if(spanVal.textContent >= 2){
+          btnSub.removeAttribute('disabled', '')
+        }
+        if(spanVal.textContent == 10){
+          btnAdd.setAttribute('disabled', '')
+        }
+      }
+      function restar(){
+        num1=parseInt(spanVal.textContent);
+        let resta = num1-num2;
+        spanVal.textContent = resta
+        let restaAmount = parseInt(amount.textContent) - val
+        amount.textContent = parseFloat(restaAmount).toFixed(2);
+        if(spanVal.textContent < 10){
+          btnAdd.removeAttribute('disabled', '')
+        }
+        if(spanVal.textContent == 1){
+          btnSub.setAttribute('disabled', '')
+        }
+      }
+    </script>
+  </body>
+</html>

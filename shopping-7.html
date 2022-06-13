@@ -66,7 +66,7 @@
           <div class="col-sm-12 col-md-6">
             <div class="card">
               <img
-                src="images/galeria1.png"
+                src="images/prod7.jpg"
                 class="width-100 rounded"
                 alt="pic"
               />
@@ -82,13 +82,13 @@
                   libero. Blanditiis, unde odit tempore vero aspernatur qui!
                 </li>
                 <li class="list-group-item">
-                  código <span class="float-right">KS-HL96-1</span>
+                  código <span class="float-right">CBP-003</span>
                 </li>
                 <li class="list-group-item">
                   material <span class="float-right">Fécula de maíz</span>
                 </li>
                 <li class="list-group-item">
-                  medidas <span class="float-right">23 X 15.5 cm</span>
+                  medidas <span class="float-right">16.4 cm.</span>
                 </li>
                 <li class="list-group-item">
                   Compra mínima <span class="float-right">100 u.</span>
@@ -102,7 +102,7 @@
                   >
                 </li>
                 <li class="list-group-item">
-                  <span class="font-weight-bold">Total:</span> <span class="float-right">S/. <span id="amount">50</span>.00</span>
+                  <span class="font-weight-bold">Total:</span> <span class="float-right">S/. <span id="amount">29.00</span></span>
                 </li>
               </ul>
               <p class="mt-5 text-success">Completa el siguiente formulario para completar la compra</p>
@@ -276,7 +276,7 @@
               <!--begin popup-gallery-->
               <div class="popup-gallery popup-gallery-rounded portfolio-pic">
                 <a class="" href="#">
-                  <img src="images/galeria1.png" class="width-100" alt="pic" />
+                  <img src="images/prod1.jpg" class="width-100" alt="pic" />
                 </a>
               </div>
               <!--end popup-gallery-->
@@ -289,7 +289,7 @@
               <!--begin popup-gallery-->
               <div class="popup-gallery popup-gallery-rounded portfolio-pic">
                 <a class="" href="#">
-                  <img src="images/galeria1.png" class="width-100" alt="pic" />
+                  <img src="images/prod2.jpg" class="width-100" alt="pic" />
                 </a>
               </div>
               <!--end popup-gallery-->
@@ -302,7 +302,7 @@
               <!--begin popup-gallery-->
               <div class="popup-gallery popup-gallery-rounded portfolio-pic">
                 <a class="" href="#">
-                  <img src="images/galeria1.png" class="width-100" alt="pic" />
+                  <img src="images/prod5.jpg" class="width-100" alt="pic" />
                 </a>
               </div>
               <!--end popup-gallery-->
@@ -315,7 +315,7 @@
               <!--begin popup-gallery-->
               <div class="popup-gallery popup-gallery-rounded portfolio-pic">
                 <a class="" href="#">
-                  <img src="images/galeria1.png" class="width-100" alt="pic" />
+                  <img src="images/prod6.jpg" class="width-100" alt="pic" />
                 </a>
               </div>
               <!--end popup-gallery-->
@@ -494,21 +494,21 @@
       let btnSub = document.getElementById("btnSub");
       let spanVal = document.getElementById("val");
       let amount = document.getElementById("amount");
-      spanVal.textContent = 100
+      spanVal.textContent = 1
       let num1 = 0;
-      let num2 = 100;
-      let val = 50;
+      let num2 = 1;
+      let val = 29.00;
       btnSub.setAttribute('disabled', '')
       function sumar(){
         num1=parseInt(spanVal.textContent);
         let suma = num1+num2;
         spanVal.textContent = suma
-        let sumaAmount = parseInt(amount.textContent) + val
-        amount.textContent = sumaAmount;
-        if(spanVal.textContent >= 200){
+        let sumaAmount = parseFloat(amount.textContent) + parseFloat(val)
+        amount.textContent = parseFloat(sumaAmount).toFixed(2);
+        if(spanVal.textContent >= 2){
           btnSub.removeAttribute('disabled', '')
         }
-        if(spanVal.textContent == 1000){
+        if(spanVal.textContent == 10){
           btnAdd.setAttribute('disabled', '')
         }
       }
@@ -517,11 +517,11 @@
         let resta = num1-num2;
         spanVal.textContent = resta
         let restaAmount = parseInt(amount.textContent) - val
-        amount.textContent = restaAmount;
-        if(spanVal.textContent < 900){
+        amount.textContent = parseFloat(restaAmount).toFixed(2);
+        if(spanVal.textContent < 10){
           btnAdd.removeAttribute('disabled', '')
         }
-        if(spanVal.textContent == 100){
+        if(spanVal.textContent == 1){
           btnSub.setAttribute('disabled', '')
         }
       }
